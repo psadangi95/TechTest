@@ -29,6 +29,10 @@ $ ./f77/convertMC
 The task consist in modifying the code to write into a separate file under `data` the event number and the relevant information for the stable particles only.
 The output file should be identical to the reference file `data/dimuon_91_stable.txt`. Note that the lines have not the same format.
 
+## My solution for task 1
+
+- `f77/convertMC_update.F`
+
 ## Task 2
 Under `cpp/`, `Event.h` defines a simplified Event class which you van load in `ROOT`:
 ```
@@ -39,8 +43,18 @@ root [1] .q
 ```
 The task consists in writing a ROOT macro that reads the output of the previous program, i.e. `data/dimuon_91_stable.txt ` and creates a `ROOT TTree` of `Event` entries and saves it to a file.
 
+## My solution for task 2
+
+- `cpp/makeTree_2.C` 
+- Run - root -l cpp/makeTree_2.C
+
 ## Task 3
 This task consist in writing a script or macro to visualise the sum of the muon energies. You can use whatever tool you want. Put the macro in the top directory.
+
+## My solution for task 3
+
+- `muon_sum_energy.C`
+- Run - root -l muon_sum_energy.C
 
 ---
 ## Notes
