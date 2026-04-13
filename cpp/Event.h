@@ -12,14 +12,14 @@ public:
     int    typ;
 
     Particle()
-       : typ(0), ee(0), mm(0) {  pp[0] = 0; pp[1] = 0; pp[2] = 0; }
+       : pp(3, 0.0), typ(0), ee(0), mm(0) {}// {  pp[0] = 0; pp[1] = 0; pp[2] = 0; }
     Particle(int t, const std::vector<double> &p, double m)
       : typ(t), pp(p), mm(m) {  ee = sqrt(pp[0]*pp[0] + pp[1]*pp[1] + pp[2]*pp[2] + mm*mm); }
 };
 
 // A class that contains a list of Particle objects
 class Event {
-private:
+public:
     long evt;
     std::vector<Particle> particles;
 
